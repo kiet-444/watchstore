@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const watchesSchema = new Schema({
+const watchsSchema = new Schema({
     watchName:{ type: String, require: true},
     image:{ type: String, require: true},
     price: {type: Number, require: true},
@@ -11,5 +11,5 @@ const watchesSchema = new Schema({
     brand:{type: mongoose.Schema.Types.ObjectId, ref: "Brands", require: true},
 },{ timestamps: true, });
 
-const Watches = mongoose.model("Watches", watchesSchema);
-module.exports = Watches;
+const Watchs = mongoose.model("Watchs", watchsSchema);
+module.exports = Watchs;
